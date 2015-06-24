@@ -12,7 +12,8 @@
 
 	validates :name, :descript, :price, presence: true
 	validates :price, numericality: { great_than: 0 }
-	validates_attachment_presence :itemimage, :message => 'is empty. Make sure to attach an image!'
+	# validates_attachment_presence :itemimage, :message => 'is empty. Make sure to attach an image!'
+	belongs_to :user
 	
 end
 	
